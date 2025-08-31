@@ -27,6 +27,10 @@ MANIFEST
 *.manifest
 *.spec
 
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -64,25 +68,12 @@ venv.bak/
 ehthumbs.db
 Thumbs.db
 
-# Project specific files
+# Project specific - PDF files
+data/temp_pdf.pdf
+data/temp_uploaded.pdf
 *.csv
-**/chat_history.json
-**/pdf_chat_history.json
-
-# Temporary files
-temp/
-tmp/
-*.tmp
-
-# Model files
-*.bin
-*.onnx
-*.pkl
-
-# Vector databases
-**/chroma_db_pdf/
-*.db
-*.sqlite3
+chat_history_*.csv
+pdf_chat_history_*.csv
 
 # Logs
 *.log
@@ -96,17 +87,29 @@ logs/
 # Streamlit
 .streamlit/
 
-# Chainlit
-.chainlit/
+# Chainlit (now centralized at root level)
+../.chainlit/
 .files/
+
+# ChromaDB
+data/chroma_db_pdf/
+*.db
+*.sqlite3
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Chat history files (duplicates removed)
+**/pdf_chat_history.json
+chainlit_app/pdf_chat_history.json
+streamlit_app/pdf_chat_history.json
+
+# Model files (if any)
+*.bin
+*.onnx
+*.pkl
+
+# Generated files
 chainlit.md
-
-# Generated exports
-ollama_output_*.csv
-chat_history_*.csv
-pdf_chat_history_*.csv
-
-# Data directories (optional - uncomment if you want to ignore)
-# data/
-# 01_simple_chatbot/data/
-# 02_rag_chatbot__pdf/data/

@@ -1,0 +1,24 @@
+# Simple AI Chatbot Dependencies
+
+# Core web framework
+streamlit>=1.28.0
+
+# Data processing
+pandas>=2.0.0
+
+# Ollama integration
+ollama>=0.1.7
+
+# JSON handling (built-in, but explicit for clarity)
+# json - built-in module
+
+# Date/time handling (built-in)
+# datetime - built-in module
+
+# Optional: Environment management
+python-dotenv>=1.0.0
+
+# Development dependencies (optional)
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0

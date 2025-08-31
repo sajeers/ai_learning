@@ -5,10 +5,17 @@ import json
 import os
 import sys
 
-# Add the rag directory to the path - updated for new structure
-sys.path.append(os.path.join(os.path.dirname(__file__), 'rag'))
-from rag.pdf_chatbot import PDFRAGChatbot
-import time
+# Add the shared directory to the path
+shared_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'shared'))
+if shared_path not in sys.path:
+    sys.path.insert(0, shared_path)
+
+try:
+    from rag.pdf_chatbot import PDFRAGChatbot
+except ImportError as e:
+    st.error(f"Could not import PDFRAGChatbot: {e}")
+    st.error("Please ensure the shared/rag directory exists and contains pdf_chatbot.py")
+    st.stop()
 
 # Configure Streamlit page
 st.set_page_config(
