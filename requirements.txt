@@ -1,16 +1,21 @@
-# PDF RAG Chatbot Dependencies
-# Core web framework and data processing
+# AI Learning Projects - Consolidated Dependencies
+# This file contains all dependencies for both projects in the workspace
+
+# Core web frameworks
 streamlit>=1.28.0
+chainlit>=1.0.0
+
+# Data processing and manipulation
 pandas>=2.0.0
 
-# PDF processing
+# PDF processing (for RAG chatbot)
 pdfplumber>=0.9.0
 
 # Machine learning and embeddings
 sentence-transformers>=2.2.0
 torch>=2.0.0
 
-# Vector database
+# Vector database (for RAG chatbot)
 chromadb>=0.4.0
 
 # Ollama integration
@@ -23,3 +28,10 @@ python-dotenv>=1.0.0
 pytest>=7.0.0
 black>=23.0.0
 flake8>=6.0.0
+
+# Note: This consolidated requirements.txt supports both:
+# - 01_simple_chatbot (basic chatbot functionality)
+# - 02_rag_chatbot__pdf (advanced RAG with PDF processing)
+#
+# Individual project requirements.txt files are maintained for reference
+# but the workspace now uses this centralized dependency management.

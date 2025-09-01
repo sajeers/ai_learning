@@ -1,0 +1,31 @@
+# PDF RAG Chatbot - Core Dependencies
+# This file contains shared dependencies used by both Streamlit and Chainlit apps
+# Install specific app dependencies using their respective requirements.txt files
+
+# PDF processing
+pdfplumber>=0.9.0
+
+# Machine learning and embeddings
+sentence-transformers>=2.2.0
+torch>=2.0.0
+
+# Vector database
+chromadb>=0.4.0
+
+# Ollama integration
+ollama>=0.1.7
+
+# Data processing
+pandas>=2.0.0
+
+# Optional: Environment management
+python-dotenv>=1.0.0
+
+# Development dependencies (optional)
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Note: Install specific UI framework dependencies:
+# For Streamlit: cd streamlit_app && pip install -r requirements.txt
+# For Chainlit: cd chainlit_app && pip install -r requirements.txt
